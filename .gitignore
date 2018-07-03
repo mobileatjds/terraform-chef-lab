@@ -1,0 +1,11 @@
+.terraform
+jschefautomate2-gsftlci6odtlyikb
+misc
+install.sh
+jschefautomate2*
+notes.txt
+terraform.tfstate*
+*.pem
+*.pub
+ami.tf
+
