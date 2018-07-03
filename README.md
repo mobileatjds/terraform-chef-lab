@@ -1,1 +1,2 @@
-# terraform-chef-lab
+# Terraform Chef Lab
+More information to follow on setting up...
