@@ -124,7 +124,7 @@ resource "aws_instance" "chefnode" {
   vpc_security_group_ids = ["${aws_security_group.tfchef.id}"]
   subnet_id              = "${aws_subnet.public.id}"
   iam_instance_profile   = "aws-opsworks-chefauto-auto-add-node"          # ensure this role is present
-  user_data              = "${file("./install.sh")}"
+  user_data              = "${file("./startkitfilenmame/userdata.sh")}"   # Change this to the location of your userdata.sh witin startkit
 
   tags {
     Name = "ChefNode"
