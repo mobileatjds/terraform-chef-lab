@@ -1,6 +1,7 @@
 .terraform
 jschefautomate2-gsftlci6odtlyikb
 misc
+misc/*
 install.sh
 jschefautomate2*
 notes.txt

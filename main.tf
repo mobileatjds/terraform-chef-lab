@@ -118,7 +118,7 @@ resource "aws_key_pair" "auth" {
 #
 
 resource "aws_instance" "chefnode" {
-  instance_type          = "${var.instance_type}"
+  instance_type          = "${var.instance_type}"                         # Node to be provisioned by Chef
   ami                    = "${lookup(var.aws_amzn_amis, var.aws_region)}"
   key_name               = "${aws_key_pair.auth.id}"
   vpc_security_group_ids = ["${aws_security_group.tfchef.id}"]
@@ -144,7 +144,7 @@ resource "aws_instance" "chefnode" {
 }
 
 resource "aws_instance" "chef-local" {
-  instance_type          = "${var.instance_type}"
+  instance_type          = "${var.instance_type}"                         # initial config of Chef Server & setup cookbooks, can be run on local machine
   ami                    = "${lookup(var.aws_amzn_amis, var.aws_region)}"
   key_name               = "${aws_key_pair.auth.id}"
   vpc_security_group_ids = ["${aws_security_group.tfchef.id}"]
