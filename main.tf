@@ -7,7 +7,9 @@
 #
 
 provider "aws" {
-  region = "${var.aws_region}"
+  region                  = "${var.aws_region}"
+  shared_credentials_file = "~/.aws/credentials" # set this to your ~/.aws/credentials
+  profile                 = "userprofile"        # set this to your aws profile name
 }
 
 #
